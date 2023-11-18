@@ -1,61 +1,69 @@
 const bankService=require('../services/bankServices')
-const getBank=(req,res)=>{
-    let getBank=bankService.getBank(); 
+
+const getBank=async(req,res)=>{
+    let getBank=await bankService.getBank(req.body); 
     res.send(getBank);
-    };
+};
         
-    const getBankLogin =(req,res)=>{
-    let getBankLogin=bankService.getBankLogin();
+const getBankLogin =async(req,res)=>{
+    let getBankLogin=await bankService.getBankLogin(req.body);
     res.send(getBankLogin);
-    };  
-    const postBankLogin =(req,res)=>{
-    let postBankLogin=bankService.postBankLogin(req.body);
+};  
+
+const postBankLogin =async(req,res)=>{
+    let postBankLogin= await bankService.postBankLogin(req.body);
     res.send(postBankLogin);
-    };
-    const deleteBankLoginUser =(req,res)=>{
-    let deleteBankLoginUser=bankService.deleteBankLoginUser(req.body) 
+};
+
+const deleteBankLoginUser =async(req,res)=>{
+    let deleteBankLoginUser=await bankService.deleteBankLoginUser(req.body) 
     res.send(deleteBankLoginUser );
-    };
+};
             
-    const getBankLoginFrwdPassword =(req,res)=>{
-    let getBankLoginFrwdPassword=bankService.getBankLoginFrwdPassword();
+const getBankLoginFrwdPassword =async(req,res)=>{
+    let getBankLoginFrwdPassword=await bankService.getBankLoginFrwdPassword(req.body);
     res.send(getBankLoginFrwdPassword);
-    };
-    const postBankLoginFrwdPassword =(req,res)=>{
-    let  postBankLoginFrwdPassword=bankService.postBankLoginFrwdPassword(req.body);
+};
+
+const postBankLoginFrwdPassword =async(req,res)=>{
+    let  postBankLoginFrwdPassword=await bankService.postBankLoginFrwdPassword(req.body);
     res.send( postBankLoginFrwdPassword);
-    };
+};
         
-    const getBankLoginChangePassword =(req,res)=>{
-    let getBankLoginChangePassword =bankService.getBankLoginChangePassword();
+const getBankLoginChangePassword =async(req,res)=>{
+    let getBankLoginChangePassword =await bankService.getBankLoginChangePassword(req.body);
     res.send(getBankLoginChangePassword );
-    };
-    const postBankLoginChangePassword =(req,res)=>{
-    let postBankLoginChangePassword=bankService.postBankLoginChangePassword(req.body);
+};
+
+const postBankLoginChangePassword =async(req,res)=>{
+    let postBankLoginChangePassword=await bankService.postBankLoginChangePassword(req.body);
     res.send(postBankLoginChangePassword);
-    };
+};
         
-    const getBankRegisters=(req,res)=>{
-    let getBankRegisters=bankService.getBankRegisters();
+const getBankRegisters=async(req,res)=>{
+    let getBankRegisters=await bankService.getBankRegisters(req.body);
     res.send(getBankRegisters);
-    };
-    const postBankRegisters=(req,res)=>{
-    let  postBankRegisters=bankService.postBankRegisters(req.body);
+};
+
+const postBankRegisters=async(req,res)=>{
+    let  postBankRegisters=await bankService.postBankRegisters(req.body);
     res.send( postBankRegisters);
-    };
+};
     
-    const getBankDonor=(req,res)=>{
-    let getBankDonor=bankService.getBankDonor();
+const getBankDonor=async(req,res)=>{
+    let getBankDonor=await bankService.getBankDonor(req.body);
     res.send(getBankDonor);
-    };
-    const postBankDonor=(req,res)=>{
-    let postBankDonor=bankService.postBankDonor(req.body);
+};
+
+const postBankDonor=async(req,res)=>{
+    let postBankDonor=await bankService.postBankDonor(req.body);
     res.send(postBankDonor);
-    };
-    const getBankReceiver=(req,res)=>{
-    let getBankReceiver=bankService.getBankReceiver();
+};
+
+const getBankReceiver=async(req,res)=>{
+    let getBankReceiver=await bankService.getBankReceiver(req.body);
     res.send (getBankReceiver);
-    };  
+};  
         
         module.exports={
             getBank ,  
