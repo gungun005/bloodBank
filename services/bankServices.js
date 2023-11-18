@@ -1,11 +1,11 @@
 const bankRepository=require('../repository/bankRepository');
-const getBank=()=>{
-let getBank=bankRepository.getBank(); 
+const getBank=(body)=>{
+let getBank=bankRepository.getBank(body); 
 return(getBank);
 };
     
-const getBankLogin =()=>{
-let getBankLogin=bankRepository.getBankLogin();
+const getBankLogin =(body)=>{
+let getBankLogin=bankRepository.getBankLogin(body);
 return(getBankLogin);
 };  
 const postBankLogin =(body)=>{
@@ -17,8 +17,8 @@ let deleteBankLoginUser=bankRepository.deleteBankLoginUser(body)
 return(deleteBankLoginUser );
 };
         
-const getBankLoginFrwdPassword =()=>{
-let getBankLoginFrwdPassword=bankRepository.getBankLoginFrwdPassword();
+const getBankLoginFrwdPassword =(body)=>{
+let getBankLoginFrwdPassword=bankRepository.getBankLoginFrwdPassword(body);
 return(getBankLoginFrwdPassword);
 };
 const postBankLoginFrwdPassword =(body)=>{
@@ -26,8 +26,8 @@ let  postBankLoginFrwdPassword=bankRepository.postBankLoginFrwdPassword(body);
 return( postBankLoginFrwdPassword);
 };
     
-const getBankLoginChangePassword =()=>{
-let getBankLoginChangePassword =bankRepository.getBankLoginChangePassword();
+const getBankLoginChangePassword =(body)=>{
+let getBankLoginChangePassword =bankRepository.getBankLoginChangePassword(body);
 return(getBankLoginChangePassword );
 };
 const postBankLoginChangePassword =(body)=>{
@@ -35,8 +35,8 @@ let postBankLoginChangePassword=bankRepository.postBankLoginChangePassword(body)
 return(postBankLoginChangePassword);
 };
     
-const getBankRegisters=()=>{
-let getBankRegisters=bankRepository.getBankRegisters();
+const getBankRegisters=(body)=>{
+let getBankRegisters=bankRepository.getBankRegisters(body);
 return(getBankRegisters);
 };
 const postBankRegisters=(body)=>{
@@ -44,16 +44,16 @@ let  postBankRegisters=bankRepository.postBankRegisters(body);
 return( postBankRegisters);
 };
 
-const getBankDonor=()=>{
-let getBankDonor=bankRepository.getBankDonor();
+const getBankDonor=(body)=>{
+let getBankDonor=bankRepository.getBankDonor(body);
 return(getBankDonor);
 };
 const postBankDonor=(body)=>{
 let postBankDonor=bankRepository.postBankDonor(body);
 return(postBankDonor);
 };
-const getBankReceiver=()=>{
-let getBankReceiver=bankRepository.getBankReceiver();
+const getBankReceiver=(body)=>{
+let getBankReceiver=bankRepository.getBankReceiver(body);
 return (getBankReceiver);
 };  
     
